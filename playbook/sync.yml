@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+  - name: "sync website"
+    synchronize:
+      src: /home/ramazan/ansible/site/
+      dest: /var/www/sari/
+      archive: no
+      checksum: yes
+      recursive: yes
+      delete: yes
+#    become: no
